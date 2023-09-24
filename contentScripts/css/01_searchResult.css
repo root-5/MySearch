@@ -1,0 +1,154 @@
+@charset "UTF-8";
+form {
+  position: relative;
+}
+form::after {
+  position: absolute;
+  content: "'/'で検索窓にフォーカス、'.' で検索窓にフォーカスして内容削除、'_'で音声検索";
+  top: -20px;
+  left: 180px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 15px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #d8d8d8;
+}
+
+#google_tips {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 2px #d8d8d8;
+  border-radius: 30px;
+}
+#google_tips::after {
+  position: absolute;
+  content: "？";
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 28px;
+  color: rgb(20, 132, 0);
+}
+#google_tips .tip_p {
+  display: none;
+}
+#google_tips span {
+  display: none;
+}
+#google_tips.open {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 2px #d8d8d8;
+  border-radius: 8px;
+}
+#google_tips.open::after {
+  position: absolute;
+  content: "？";
+  display: none;
+}
+#google_tips.open .tip_p {
+  display: block;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+#google_tips.open span {
+  display: block;
+  margin: 0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#google_lang_toggle {
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 2px #d8d8d8;
+  border-radius: 30px;
+}
+#google_lang_toggle::after {
+  position: absolute;
+  content: "En";
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 28px;
+  color: rgb(0, 0, 132);
+}
+#google_lang_toggle.en::after {
+  content: "Jp";
+}
+
+.selectedSearchResult {
+  display: block;
+}
+.selectedSearchResult h3 {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: yellow;
+}
+
+/* 広告部分と検索結果のスポンサー部分を非表示 */
+#taw {
+  display: none;
+}
+#taw.appear {
+  display: block;
+}
+
+#bottomads {
+  display: none;
+}
+#bottomads.appear {
+  display: block;
+}
+
+#sponsorToggle {
+  padding: 4px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadce0;
+  background: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#sponsorToggle:hover {
+  background-color: #f1f3f4;
+}
+
+#sponsorToggleBottom {
+  padding: 4px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadce0;
+  background: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#sponsorToggleBottom:hover {
+  background-color: #f1f3f4;
+}

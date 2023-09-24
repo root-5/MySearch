@@ -1,0 +1,25 @@
+// 雑な広告削除
+// a img {
+//     max-height: 100px !important;
+//     opacity: 0.6 !important;
+//     &:hover {
+//         max-height: none !important;
+//     }
+// }
+// iframe {
+//     max-height: 100px !important;
+//     opacity: 0.6 !important;
+//     &:hover {
+//         max-height: none !important;
+//     }
+// }
+// iframe[src^="https://codepen.io"] {
+//     opacity: 1 !important;
+//     max-height: none !important;
+//     height: 400px !important;
+// }
+// [class^="ad"],
+// div[id*="modal"],
+// div[class*="modal"] {
+//     display: none !important;
+// }

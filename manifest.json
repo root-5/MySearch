@@ -1,0 +1,62 @@
+{
+    "name": "MySearch",
+    "description": "自分用にカスタムしたChrome拡張機能です。",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "chrome_url_overrides": {
+        "newtab": "newTab/newTabRedirect.html"
+    },
+    "action": {
+        "default_title": "Click Me",
+        "default_popup": "popup/popup.html"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Space",
+                "mac": "Command+Space"
+            },
+            "description": "_execute_action",
+            "global": true
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/search*"],
+            "css": ["contentScripts/css/01_searchResult.css"],
+            "js": ["contentScripts/01_searchResult.js"]
+        },
+        {
+            "matches": ["https://*/*", "http://*/*"],
+            "exclude_matches": [
+                "https://google.com/*",
+                "https://google.co.jp/*",
+                "https://www.google.com/*",
+                "https://www.google.co.jp/*",
+                "https://mail.google.com/*",
+                "https://www.amazon.co.jp/*",
+                "https://www.youtube.com/*"
+            ],
+            "js": ["contentScripts/02_searchResultPage.js"],
+            "css": ["contentScripts/css/02_searchResultPage.css"]
+        },
+        {
+            "matches": [
+                "https://qiita.com/*",
+                "https://teratail.com/*",
+                "https://magazine.techacademy.jp/*",
+                "https://www.javadrive.jp/*",
+                "https://www.sejuku.net/*",
+                "https://stackoverflow.com/*"
+            ],
+            "css": ["contentScripts/css/10_deleteAd.css"]
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <html>
+
+    <head>
+        <link rel="icon" href="../img/icon64.ico">
+        <meta charset="utf-8">
+        <title>新しいタブ</title>
+    </head>
+
+    <body>
+        <div id="center">
+            <form>
+                <input id="search" type="search" placeholder="Search..." autofocus></input>
+                <!-- <p id="notice">※ private search > [SHIFT]</p> -->
+            </form>
+            <div id="items">
+                <a href="https://www.youtube.com/" class="item" style="background-color: red; color: white;"> YouTube
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" class="item"
+                    style="display: table; background-color: white;">
+                    <span style=" color: blue;">G</span>
+                    <span style="color: red;">m</span>
+                    <span style="color: #fbbc06;">a</span>
+                    <span style="color: bule;">i</span>
+                    <span style="color: green;">l</span>
+                </a>
+                <a href="https://keep.google.com/u/0/" class="item" style="background-color: #fbbc06; color: white;">
+                    Keep </a>
+                <a href="https://www.notion.so/" class="item" style="background-color: #ffffff; color: black;"> Notion
+                </a>
+                <a href="https://github.com/" class="item"
+                    style="background-color: #0c1117; color: white; border: solid 1px white;"> GitHub </a>
+                <a href="https://langchain-wine-six.vercel.app/" class="item"
+                    style="background-color: #2a2525; color: white; border: solid 1px white;"> MyApp </a>
+            </div>
+        </div>
+        <style>
+            html {
+                background-color: black;
+                padding: 6px;
+                border-radius: 6px;
+            }
+
+            #center {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #items {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .item {
+                display: block;
+                padding: 3px;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+
+            .item:hover {
+                opacity: 0.8;
+            }
+
+            #search {
+                width: 460px;
+                height: 36px;
+                font-size: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            #notice {
+                color: white;
+                font-size: 12px;
+                margin: 0;
+                margin-top: 2px;
+            }
+        </style>
+        <!-- popupと処理をまとめるため、popup.jsを使用する -->
+        <script src="../popup/popup.js"></script>
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,47 @@
+a img {
+  display: none !important;
+}
+
+[id^=google_ads] {
+  display: none;
+}
+
+#pc_all_right_1,
+#pc_all_right_2 {
+  display: none;
+}
+
+[class^=firstView_inner] {
+  display: none;
+}
+
+[role^=dialog] {
+  display: none;
+}
+
+.ad,
+.voice,
+.service-description,
+.post-column,
+#__pu_x_modal {
+  display: none !important;
+}
+
+.adright,
+.adsbygoogle,
+#adcenter_box,
+#adheader {
+  display: none !important;
+}
+
+.l-mainContent__inner {
+  margin-top: 30px !important;
+}
+
+#fv-banner_random,
+#fix_sidebar,
+.p-articleThumb,
+.box_voice,
+.p-blogParts {
+  display: none !important;
+}

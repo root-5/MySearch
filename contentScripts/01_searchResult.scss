@@ -1,0 +1,173 @@
+$color_1: #d8d8d8;
+$color_2: rgb(20, 132, 0);
+$color_3: rgb(0, 0, 132);
+
+//====================================================================================================
+// 検索フォームに対する追加要素
+form {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "'/'で検索窓にフォーカス、'.' で検索窓にフォーカスして内容削除、'_'で音声検索";
+        top: -20px;
+        left: 180px;
+        width: fit-content;
+        height: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        color: $color_1;
+    }
+}
+
+#google_tips {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px #d8d8d8;
+    border-radius: 30px;
+
+    &::after {
+        position: absolute;
+        content: '？';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 28px;
+        color: $color_2;
+    }
+
+    .tip_p {
+        display: none;
+    }
+
+    span {
+        display: none;
+    }
+
+    &.open {
+        position: absolute;
+        right: -100px;
+        top: 0;
+        width: 250px;
+        height: 500px;
+        background-color: white;
+        text-align: left;
+        padding: 10px;
+        box-shadow: 2px 2px 5px 2px #d8d8d8;
+        border-radius: 8px;
+
+        &::after {
+            position: absolute;
+            content: '？';
+            display: none;
+        }
+
+        .tip_p {
+            display: block;
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        span {
+            display: block;
+            margin: 0;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}
+
+#google_lang_toggle {
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px #d8d8d8;
+    border-radius: 30px;
+
+    &::after {
+        position: absolute;
+        content: 'En';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 28px;
+        color: $color_3;
+    }
+
+    &.en::after {
+        content: 'Jp';
+    }
+}
+
+//====================================================================================================
+// 選択中の検索候補
+.selectedSearchResult {
+    display: block;
+
+    h3 {
+        display: block;
+        width: fit-content;
+        background-color: yellow;
+    }
+}
+
+//====================================================================================================
+/* 広告部分と検索結果のスポンサー部分を非表示 */
+#taw {
+    display: none;
+
+    &.appear {
+        display: block;
+    }
+}
+
+#bottomads {
+    display: none;
+
+    &.appear {
+        display: block;
+    }
+}
+
+#sponsorToggle {
+    padding: 4px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadce0;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f1f3f4;
+    }
+}
+
+#sponsorToggleBottom {
+    padding: 4px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadce0;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f1f3f4;
+    }
+}

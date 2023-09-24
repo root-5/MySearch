@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5,
+    "dartsass.outputFormat": "cssonly",
+    "dartsass.pauseInterval": 2,
+    "dartsass.targetDirectory": "contentScripts/css",
+    "dartsass.disableSourceMap": true,
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    }
+}

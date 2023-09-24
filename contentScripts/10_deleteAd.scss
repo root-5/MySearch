@@ -1,0 +1,53 @@
+// 雑な広告削除
+a img {
+    display: none !important;
+}
+
+// qiita
+[id^="google_ads"] {
+    display: none;
+}
+
+// teratail
+#pc_all_right_1,
+#pc_all_right_2 {
+    display: none;
+}
+
+[class^="firstView_inner"] {
+    display: none;
+}
+
+// techAcademy
+[role^="dialog"] {
+    display: none;
+}
+
+.ad,
+.voice,
+.service-description,
+.post-column,
+#__pu_x_modal {
+    display: none !important;
+}
+
+// Let'sプログラミング
+.adright,
+.adsbygoogle,
+#adcenter_box,
+#adheader {
+    display: none !important;
+}
+
+// SAMURAI ENGINEER
+.l-mainContent__inner {
+    margin-top: 30px !important;
+}
+
+#fv-banner_random,
+#fix_sidebar,
+.p-articleThumb,
+.box_voice,
+.p-blogParts {
+    display: none !important;
+}
