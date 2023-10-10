@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const search = document.querySelector('#search');
 
+    // 検索画面をクリックしたときはフォームにフォーカスを当てる
+    document.addEventListener('click', function (e) {
+        search.focus();
+    });
+
     // カスタム検索モードの変数宣言と見た目の変更
     let privateMode = false;
     document.addEventListener('keydown', function (e) {
