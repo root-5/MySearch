@@ -1,93 +1,121 @@
 // ================================================================
 // カスタム検索用データ
 const customSearchData = [
-    // ==============================
-    // 言語やライブラリなど
+    // ドキュメント一覧
     {
         name: 'JavaScript',
         link: 'https://developer.mozilla.org/ja/docs/Web/JavaScript',
+        isLang: true,
     },
     {
         name: 'TypeScript',
         link: 'https://www.typescriptlang.org/docs/',
+        isLang: true,
     },
     {
         name: 'Python',
         link: 'https://docs.python.org/ja/3/',
+        isLang: true,
+    },
+    {
+        name: 'Go',
+        link: 'https://go.dev/doc/',
+        isLang: true,
     },
     {
         name: 'HTML',
         link: 'https://developer.mozilla.org/ja/docs/Web/HTML',
+        isLang: true,
     },
     {
         name: 'CSS',
         link: 'https://developer.mozilla.org/ja/docs/Web/CSS',
+        isLang: true,
     },
     {
         name: 'PHP',
         link: 'https://www.php.net/manual/ja/index.php',
+        isLang: true,
     },
     {
         name: 'Ruby',
         link: 'https://www.ruby-lang.org/ja/documentation/',
+        isLang: true,
     },
     {
         name: 'VBA',
         link: 'https://learn.microsoft.com/ja-jp/office/vba/api/overview/excel',
+        isLang: true,
     },
     {
         name: 'Tailwindcss',
         link: 'https://tailwindcss.com/docs/installation',
-    },
-    {
-        name: 'Node.js',
-        link: 'https://nodejs.org/ja/docs/',
+        isLang: false,
     },
     {
         name: 'React',
         link: 'https://ja.react.dev/learn',
+        isLang: false,
     },
     {
         name: 'Next.js',
         link: 'https://nextjs.org/docs',
+        isLang: false,
     },
     {
         name: 'LangChain',
         link: 'https://js.langchain.com/docs/get_started/introduction/',
-    },
-    // ==============================
-    // 各種サービス
-    {
-        name: 'MyApp',
-        link: 'https://langchain-wine-six.vercel.app/cording',
+        isLang: false,
     },
     {
-        name: 'Youtube',
+        name: 'YouTube',
         link: 'https://www.youtube.com/',
-    },
-    {
-        name: 'Gkeep',
-        link: 'https://keep.google.com/u/0/',
+        isLang: false,
     },
     {
         name: 'Gmail',
         link: 'https://mail.google.com/mail/u/0/#inbox',
+        isLang: false,
     },
     {
-        name: 'Gfonts',
-        link: 'https://fonts.google.com/',
+        name: 'Gkeep',
+        link: 'https://keep.google.com/u/0/',
+        isLang: false,
+    },
+    {
+        name: 'Gdrive',
+        link: 'https://drive.google.com/drive/my-drive',
+        isLang: false,
+    },
+    {
+        name: 'TradingView',
+        link: 'https://jp.tradingview.com/chart/',
+        isLang: false,
     },
     {
         name: 'GitHub',
         link: 'https://github.com/',
+        isLang: false,
     },
     {
         name: 'Vercel',
-        link: 'https://vercel.com/',
+        link: 'https://vercel.com/dashboard',
+        isLang: false,
+    },
+    {
+        name: 'DockerHub',
+        link: 'https://hub.docker.com/',
+        isLang: false,
     },
     {
         name: 'Notion',
         link: 'https://www.notion.so/',
+        isLang: false,
+    },
+    {
+        name: 'MyApp',
+        link: './',
+        isLang: false,
     },
 ];
 
