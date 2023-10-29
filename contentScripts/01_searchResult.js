@@ -115,13 +115,7 @@ function indexAtag() {
 // 矢印で検索結果を操作する
 (function () {
     aTags = indexAtag();
-
     let i = null;
-    // aTags[i].focus();
-    // aTags[i].classList.toggle('selectedSearchResult');
-
-    // ディスクリプションのテキストを取得する際に、emタグ内部のテキストの後ろの文字数を指定する
-    const additionalDiscriptionText = 3;
 
     // キーボード操作で検索結果を操作する
     document.addEventListener('keydown', function (e) {
@@ -176,80 +170,8 @@ function indexAtag() {
                 }
                 return false;
             }
-            // "Enter"でemタグ内部のテキストとその後ろのadditionalDiscriptionText文字分をローカルに保存し、検索結果を開く
-            if (e.key == 'Enter') {
-                e.preventDefault();
-                try {
-                    // aタグの親要素を取得
-                    const aTagParentEle = aTags[i].closest('[data-snhf="0"]').parentNode;
-
-                    //emタグ内部のテキストを取得
-                    const emTagText = aTagParentEle.querySelector('em').textContent;
-
-                    //ディスクリプションのテキストを取得
-                    const discriptionText =
-                        aTagParentEle.querySelector('[data-sncf="1"]').textContent;
-
-                    //ディスクリプションからemタグ内部のテキストを見つけて、そのadditionalDiscriptionText文字後までを切り取る
-                    const discriptionTextSlice = discriptionText.slice(
-                        discriptionText.indexOf(emTagText),
-                        discriptionText.indexOf(emTagText) +
-                            emTagText.length +
-                            additionalDiscriptionText
-                    );
-
-                    // ローカルストレージに保存
-                    chrome.storage.local.set({
-                        emTagText: emTagText,
-                        discriptionText: discriptionTextSlice,
-                    });
-                } catch (error) {
-                    console.log(error);
-                    console.log('No openSearchResult');
-                }
-                // 検索結果を開く
-                window.location.href = aTags[i].href;
-            }
         }
     });
-
-    // aタグにクリックイベントを追加する
-    for (let i = 0; i < aTags.length; i++) {
-        aTags[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            try {
-                // aタグの親要素を取得
-                const aTagParentEle = aTags[i].closest('[data-snhf="0"]').parentNode;
-
-                //emタグ内部のテキストを取得
-                const emTagText = aTagParentEle.querySelector('em').textContent;
-
-                //ディスクリプションのテキストを取得
-                const discriptionText = aTagParentEle.querySelector('[data-sncf="1"]').textContent;
-
-                //ディスクリプションからemタグ内部のテキストを見つけて、そのadditionalDiscriptionText文字後までを切り取る
-                const discriptionTextSlice = discriptionText.slice(
-                    discriptionText.indexOf(emTagText),
-                    discriptionText.indexOf(emTagText) +
-                        emTagText.length +
-                        additionalDiscriptionText
-                );
-
-                // ローカルストレージに保存
-                chrome.storage.local.set({
-                    emTagText: emTagText,
-                    discriptionText: discriptionTextSlice,
-                });
-
-                // 検索結果のリンクにページ遷移
-                window.location.href = aTags[i].href;
-            } catch (error) {
-                console.log(error);
-                console.log('No openSearchResult');
-                window.location.href = aTags[i].href;
-            }
-        });
-    }
 })();
 
 // 音声入力などのショートカットキー追加

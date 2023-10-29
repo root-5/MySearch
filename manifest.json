@@ -24,28 +24,11 @@
             "global": true
         }
     },
-    "background": {
-        "service_worker": "background.js"
-    },
     "content_scripts": [
         {
             "matches": ["https://www.google.com/search*"],
             "css": ["contentScripts/css/01_searchResult.css"],
             "js": ["contentScripts/01_searchResult.js"]
-        },
-        {
-            "matches": ["https://*/*", "http://*/*"],
-            "exclude_matches": [
-                "https://google.com/*",
-                "https://google.co.jp/*",
-                "https://www.google.com/*",
-                "https://www.google.co.jp/*",
-                "https://mail.google.com/*",
-                "https://www.amazon.co.jp/*",
-                "https://www.youtube.com/*"
-            ],
-            "js": ["contentScripts/02_searchResultPage.js"],
-            "css": ["contentScripts/css/02_searchResultPage.css"]
         },
         {
             "matches": [
