@@ -190,8 +190,8 @@ function indexAtag() {
                 }
             }
 
-            // "."入力でフォームにフォーカスしつつ検索ワードを削除
-            if (e.key == '.') {
+            // "\"入力でフォームにフォーカスしつつ検索ワードを削除
+            if (e.key == '\\') {
                 e.preventDefault();
                 try {
                     searchInputEle.textContent = '';
